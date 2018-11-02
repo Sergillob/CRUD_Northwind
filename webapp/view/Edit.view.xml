@@ -1,0 +1,34 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZPRODUCTS_CRUD.controller.Edit"
+	xmlns:form="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>editar}" navButtonPress="onNavPress" showNavButton="true">
+				<content>
+					<form:SimpleForm id="form" layout="ResponsiveGridLayout" editable="true" class="sapUiResponsiveMargin" width="auto" labelSpanL="3"
+						labelSpanM="4" emptySpanL="3" emptySpanM="4" columnsL="1" columnsM="1">
+						<form:content>
+							<Label id="IDLabel" text="ID"/>
+							<Input id="IDInput" enabled="false" value="{ID}"/>
+							<Label id="NameLabel" text="Name"/>
+							<Input id="NameInput" value="{ path: 'Name', type: 'sap.ui.model.odata.type.string' }"/>
+							<Label id="DescriptionLabel" text="Description"/>
+							<Input id="DescriptionInput"  value="{Description}"/>
+							<Label id="DiscDateLabel" text="DiscontinuedDate"/>
+							<Input id="DiscDateInput"  value="{DiscontinuedDate}"/>
+							<Label id="RatingLabel" text="Rating"/>
+							<RatingIndicator value="{Rating}"/>
+							<Label id="PriceLabel" text="Price"/>
+							<Input id="PriceInput"  value="{Price}"/>
+						</form:content>
+					</form:SimpleForm>
+				</content>		
+						<footer>
+							<Toolbar>
+								<ToolbarSpacer/>
+								<Button type="Accept" text="save" icon="sap-icon://save" press="onSave"/>
+							</Toolbar>
+						</footer>
+					</Page>
+				</pages>
+			</App>
+		</mvc:View>

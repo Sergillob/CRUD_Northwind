@@ -1,0 +1,74 @@
+<!-- 
+La idea de la app és mostrar dades del servei Northwind V2 que es pugui llegir i escriure, amb 3 botons a baix de tot
+de la pantalla;
+EDIT->Crearà una nova pantalla(vista=Edit) per modificar el registre seleccionat a la pantalla anterior amb un boto de gravar
+      que farà un update al servei de northwind
+      
+CREATE-> Per fer-ho diferent, cridaré a una popup(sap.m.Dialog) per crear el registre amb un botó de gravar 
+         que farà un create al servei de northwind via javascript al controller (sense xml views)
+
+DELETE->Directament al marcar el registre i donar-li al botó de delete farà un delete al servei de northwind
+-->
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZPRODUCTS_CRUD.controller.Mostrar_dades"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>titleitem}">
+				<Table id="it_item" items="{ path: '/Products', sorter: { path: 'ID' } }" mode="SingleSelectLeft" updateFinished="onUF">
+					<!-- updateFinished es per controlar el núm. de registres de la taula!!! -->
+					<!--Podríem posar class="sapUiResponsiveMargin"  per fer-ho més maco-->
+					<headerToolbar>
+						<Toolbar>
+							<Title id="title" text="{i18n>positions}" level="H2"/>
+							<ToolbarSpacer/>
+							<SearchField id="searchfi" search="handleSearch" width="auto"/>
+							<OverflowToolbarButton icon="sap-icon://filter"/>
+							<OverflowToolbarButton icon="sap-icon://sort"/>
+						</Toolbar>
+					</headerToolbar>
+					<columns>
+						<Column width="12em">
+							<Text text="ID"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Name"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+							<Text text="Description"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="DiscontinuedDate"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Rating"/>
+						</Column>
+						<Column>
+							<Text text="Price"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem type="Navigation" press="NavToEditView">
+							<cells>
+								<Text text="{ID}"/>
+								<Text text="{Name}"/>
+								<Text text="{Description}"/>
+								<Text text="{DiscontinuedDate}"/>
+								<RatingIndicator value="{Rating}"/>
+								<Text text="{Price}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+				<content></content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button type="Emphasized" text="EDIT" press="onEdit"/>
+						<Button type="Accept" text="CREATE" press="onCreate"/>
+						<Button type="Reject" text="DELETE" press="onDelete"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

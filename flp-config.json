@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "ZPRODUCTS_CRUD.Exemple_CRUD_Northwind",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#Exemple_CRUD_Northwind-Display",
+        "navigationComponentName": "ZPRODUCTS_CRUD",
+        "intentSemanticObject": "Exemple_CRUD_Northwind",
+        "intentAction": "Display",
+        "html5ApplicationName": "exemplecrudnorthwind",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "00000000-0000-1111-0000-00000000"
+        ],
+        "contentPackages": [
+            "00000000-0000-2222-0000-00000000"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Northwind CRUD",
+        "subtitle": "Products (Responsive)",
+        "searchKeywords": "Northwind CRUD,Products (Responsive)",
+        "displayIconUrl": "sap-icon://add-product",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

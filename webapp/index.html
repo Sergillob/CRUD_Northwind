@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>ZPRODUCTS_CRUD</title>
+
+       <!--  ATENCIO 
+		***   EL neo-app.json SEMPRE ha d'estar a l'arrel del teu projecte, i resources i test-resources
+		***   has de posar src="/test-resources/.... y/o src="/resources/sap-ui-core.js"
+		*** https://sapui5.hana.ondemand.com/#/topic/2d3eb2f322ea4a82983c1c62a33ec4ae.html
+		
+		SAPUI5 can either be loaded locally with a relative path from a Web server or externally from a
+		Content Delivery Network (CDN).
+		Loading SAPUI5 from a CDN improves your app performance: You can load from a server that (in most cases) 
+		is much closer to your location, and you can benefit from the caching mechanism and the language fallback logic.
+		
+		Adapt the path where the resources are located (src="/resources/sap-ui-core.js") according to your installation. 
+		For OpenUI5 you can use src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js". 
+		For accessing SAPUI5 on the SAP Cloud Platform, for example, 
+		use src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js".
+        You can use this reference to the latest stable version of SAPUI5 for testing purposes, but never use this for 
+        productive use. In an actual app, you always have to specify an SAPUI5 version explicitly.
+       
+        EXEMPLE: src="https://sapui5.hana.ondemand.com/1.42.6/resources/sap-ui-core.js"
+		-->
+
+		<script id="sap-ui-bootstrap"
+			src="/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m, sap.ui.layout"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"ZPRODUCTS_CRUD": ""}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "ZPRODUCTS_CRUD"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="UTF-8">
+
+		<title>ZPRODUCTS_CRUD</title>
+
+       <!--  ATENCIO 
+		***   EL neo-app.json SEMPRE ha d'estar a l'arrel del teu projecte, i resources i test-resources
+		***   has de posar src="/test-resources/.... y/o src="/resources/sap-ui-core.js"
+		*** https://sapui5.hana.ondemand.com/#/topic/2d3eb2f322ea4a82983c1c62a33ec4ae.html
+		
+		SAPUI5 can either be loaded locally with a relative path from a Web server or externally from a
+		Content Delivery Network (CDN).
+		Loading SAPUI5 from a CDN improves your app performance: You can load from a server that (in most cases) 
+		is much closer to your location, and you can benefit from the caching mechanism and the language fallback logic.
+		
+		Adapt the path where the resources are located (src="/resources/sap-ui-core.js") according to your installation. 
+		For OpenUI5 you can use src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js". 
+		For accessing SAPUI5 on the SAP Cloud Platform, for example, 
+		use src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js".
+        You can use this reference to the latest stable version of SAPUI5 for testing purposes, but never use this for 
+        productive use. In an actual app, you always have to specify an SAPUI5 version explicitly.
+       
+        EXEMPLE: src="https://sapui5.hana.ondemand.com/1.42.6/resources/sap-ui-core.js"
+		-->
+
+		<script id="sap-ui-bootstrap" src="/resources/sap-ui-core.js" data-sap-ui-libs="sap.m, sap.ui.layout" data-sap-ui-theme="sap_belize" data-sap-ui-compatversion="edge" data-sap-ui-resourceroots="{&quot;ZPRODUCTS_CRUD&quot;: &quot;&quot;}">
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "ZPRODUCTS_CRUD"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	<style>.facadebtn{display:inline-block;width:60px;height:60px;background-color:#009de0;border-radius:50px;text-align:center;box-shadow: 2px 2px 3px #999;opacity:.3;}
+.facadebtn .sapUiIcon{color:#FFF;font-size:1.5rem;cursor:pointer;line-height:60px;width:60px;}
+.facadebtn:hover{opacity:1;}
+#interactive.viewport video{width:320px;height:240px;}
+.facade .sapMSLITitleOnly, .facade .sapMILILabel {font-size: 1rem;}
+#interactive.viewport .drawingBuffer{width:320px;height:240px;position:absolute;}
+</style>
+<script type="text/javascript">
+
+window._facadeSettings = {"cordova-plugin-device-orientation":false,"accelerometer":{},"compass":{}};
+	window.sIdeOrigin = "https://webidecp-p1941298027trial.dispatcher.hanatrial.ondemand.com";
+	window.sap_webide_FacadePreview = true;
+	window.sFacadePath = "https://webidecp-p1941298027trial.dispatcher.hanatrial.ondemand.com/hatdi_uf2d18766/hybrid/cordovafacade/cordova.js";
+	window.sFacadeCfgViewPath = "https://webidecp-p1941298027trial.dispatcher.hanatrial.ondemand.com/hatdi_uf2d18766/hybrid/view/";
+	window.bridgeHtml = "https://webidecp-p1941298027trial.dispatcher.hanatrial.ondemand.com/hatdi_uf2d18766/hybrid/cordovafacade/MessageBridge.html";
+	window.msgDefPath = "https://webidecp-p1941298027trial.dispatcher.hanatrial.ondemand.com/hatdi_uf2d18766/hybrid/mobileextend/MessageDef.js";
+	window.msgBridgePath = "https://webidecp-p1941298027trial.dispatcher.hanatrial.ondemand.com/hatdi_uf2d18766/hybrid/mobileextend/MessageBridge.js";
+	window.meCssPath = "https://webidecp-p1941298027trial.dispatcher.hanatrial.ondemand.com/hatdi_uf2d18766/hybrid/css/mobileExtend.css";
+</script>
+<script src="https://webidecp-p1941298027trial.dispatcher.hanatrial.ondemand.com/hatdi_uf2d18766/hybrid/cordovafacade/floatingButton.js" type="text/javascript"></script>
+</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>
