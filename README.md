@@ -1,2 +1,2 @@
 # CRUD_Northwind
-Northwind amb operacions CRUD
+Northwind amb operacions CRUD.
